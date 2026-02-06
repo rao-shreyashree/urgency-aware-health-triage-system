@@ -1,0 +1,16 @@
+influenza:fever,headache,fatigue,nausea
+flu:fever,cough,fatigue,muscle_pain,headache
+common_cold:cough,runny_nose,sore_throat,fatigue
+cardiac_event:chest_pain,shortness_of_breath,palpitations,fainting
+stroke:sudden_weakness,confusion,difficulty_speaking,vision_loss
+urinary_infection:burning_urination,frequent_urination,abdominal_pain
+dehydration:fatigue,dizziness,dry_mouth,low_blood_pressure
+food_poisoning:nausea,vomiting,diarrhea,abdominal_pain
+migraine:headache,nausea,blurred_vision,sensitivity_to_light
+hypertension:high_blood_pressure,headache,dizziness
+hypotension:low_blood_pressure,fainting,dizziness
+allergic_reaction:rash,itching,swelling,shortness_of_breath
+respiratory_infection:cough,fever,shortness_of_breath,fatigue
+gastrointestinal_issue:abdominal_pain,nausea,vomiting,diarrhea
+neurological_issue:confusion,memory_loss,tremors,weakness
+anxiety_episode:palpitations,shortness_of_breath,dizziness,sweating
