@@ -58,7 +58,7 @@ const Result = () => {
                 borderRadius: '30px',
                 padding: '40px',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-                border: `2px solid ${isHighRisk ? '#ffcc00' : '#ff4d88'}`,
+                border: `2px solid ${isHighRisk ? '#ff1900' : '#85ed6d'}`,
                 textAlign: 'center'
             }}>
                 <div style={{ 

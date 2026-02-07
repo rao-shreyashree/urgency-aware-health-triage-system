@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
     printf("{\n");
     printf("  \"urgency\": %d,\n", result.urgency);
     printf("  \"severity_score\": %d,\n", result.severity_score);
+    printf("  \"confidence\": %.2f,\n", result.confidence);
     printf("  \"recommendation\": \"%s\"\n", result.recommendation);
     printf("}\n");
 
