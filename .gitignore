@@ -1,0 +1,21 @@
+# Prerequisites: Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# Prerequisites: C / C++
+*.o
+*.out
+backend/triage_engine
+backend/triage_engine.exe
+
+# Build directories
+dist/
+build/
+
+# IDE Specific
+.vscode/
+.idea/
+.DS_Store
