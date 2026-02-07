@@ -1,9 +1,6 @@
 import React from 'react';
 
-// dropdown to switch languages and update voice recognition
 const LanguageSelector = ({ selectedLanguage, onChange }) => {
-    
-    // right now, english, hindi, kannada and tamil are supported
     const languages = [
         { code: 'en-US', label: 'English' },
         { code: 'hi-IN', label: 'Hindi (हिंदी)' },
@@ -12,24 +9,36 @@ const LanguageSelector = ({ selectedLanguage, onChange }) => {
     ];
 
     return (
-        <div style={{ marginBottom: '20px' }}>
-        
-        <label style={{ marginRight: '10px', fontWeight: 'bold' }}>
-            Select Language:
-        </label>
-        
-        <select 
-            value={selectedLanguage} 
-            onChange={(e) => onChange(e.target.value)}
-            style={{ padding: '8px', borderRadius: '4px' }}
-        >
-            {languages.map((lang) => (
-            <option key={lang.code} value={lang.code}>
-                {lang.label}
-            </option>
-            ))}
-        </select>
-        
+        <div style={{ marginBottom: '20px', textAlign: 'center' }}>
+            <label style={{ 
+                fontSize: '1.1rem', 
+                marginRight: '12px', 
+                color: '#555',
+                fontWeight: '500' 
+            }}>
+                Select Language:
+            </label>
+            
+            <select 
+                value={selectedLanguage} 
+                onChange={(e) => onChange(e.target.value)}
+                style={{ 
+                    padding: '10px 15px', 
+                    borderRadius: '12px',
+                    border: '2px solid #ffb3c1',
+                    backgroundColor: 'white',
+                    color: '#444',
+                    fontSize: '1rem',
+                    outline: 'none',
+                    cursor: 'pointer'
+                }}
+            >
+                {languages.map((lang) => (
+                    <option key={lang.code} value={lang.code}>
+                        {lang.label}
+                    </option>
+                ))}
+            </select>
         </div>
     );
 };

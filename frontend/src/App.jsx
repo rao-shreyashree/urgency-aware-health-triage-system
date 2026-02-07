@@ -4,43 +4,60 @@ import Home from './pages/Home';
 import SymptomFlow from './pages/SymptomFlow';
 import Result from './pages/Result';
 
-// root component handling navigation and global layout
 function App() {
-    return (
-        <Router>
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+  return (
+    <Router>
+        <div style={{ 
+            minHeight: '100vh', 
+            backgroundColor: '#fffefe', 
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            overflowX: 'hidden',
+            position: 'relative'
+        }}>
             
-            {/* navigation bar */}
             <nav style={{ 
-                padding: '1rem 2rem', 
-                backgroundColor: '#007bff', 
-                color: 'white',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                padding: '20px 40px', 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                position: 'absolute',
+                top: 0,
+                width: '100%',
+                boxSizing: 'border-box',
+                zIndex: 100
             }}>
-            <h2 style={{ margin: 0, fontSize: '1.5rem' }}>HealthCheck AI</h2>
+                <div style={{ 
+                    fontSize: '1.2rem', 
+                    fontWeight: 'bold', 
+                    color: '#ff4d88',
+                    letterSpacing: '-0.5px'
+                }}>
+                    CareTriage
+                </div>
+                
+                <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '10px',
+                    padding: '6px 16px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                    borderRadius: '20px'
+                }}>
+                    <span style={{ fontSize: '18px' }}>🌸</span>
+                    <span style={{ fontWeight: '600', color: '#444' }}>Hi Shreya</span>
+                </div>
             </nav>
 
-            {/* route configuration */}
-            <main style={{ flex: 1 }}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/triage" element={<SymptomFlow />} />
-                <Route path="/result" element={<Result />} />
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/triage" element={<SymptomFlow />} />
+                    <Route path="/result" element={<Result />} />
+                </Routes>
             </main>
-
-            {/* footer */}
-            <footer style={{ 
-                textAlign: 'center', 
-                padding: '20px', 
-                color: '#888', 
-                fontSize: '0.8rem' 
-            }}>
-            &copy; 2026 Urgency Aware Health Triage System
-            </footer>
         </div>
-        </Router>
-    );
+    </Router>
+  );
 }
 
 export default App;

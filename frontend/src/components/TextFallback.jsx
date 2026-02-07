@@ -1,48 +1,64 @@
 import React, { useState } from 'react';
 
-// to allow manual text entry if voice recognition is unavailable or person chooses to type
 const TextFallback = ({ onTextSubmit }) => {
-    const [text, setText] = useState('');
+  const [text, setText] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (text.trim()) {
-        onTextSubmit(text);
-        }
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (text.trim()) onTextSubmit(text);
+  };
 
-    return (
-        <div style={{ marginTop: '30px', borderTop: '1px solid #ddd', paddingTop: '20px' }}>
-        <p style={{ fontWeight: 'bold' }}>Or type your symptoms:</p>
-        <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '10px' }}>
-            <input
-            type="text"
+  return (
+    <div style={{ width: '100%', textAlign: 'center' }}>
+        <h3 style={{ 
+            fontSize: '1.4rem', 
+            color: '#333', 
+            marginBottom: '15px' 
+        }}>Or type your symptoms:</h3>
+        
+        <form onSubmit={handleSubmit} style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center' 
+            }}>
+            <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="e.g., I have a sharp pain in my chest"
+            placeholder="Describe how you feel..."
             style={{
-                flex: 1,
-                padding: '10px',
-                borderRadius: '4px',
-                border: '1px solid #ccc'
+                width: '100%',
+                height: '120px',
+                padding: '15px',
+                borderRadius: '15px',
+                border: '2px solid #ffb3c1', 
+                fontSize: '1.2rem',
+                fontFamily: 'inherit',
+                marginBottom: '15px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                backgroundColor: 'rgba(255, 255, 255, 0.5)'
             }}
             />
             <button 
             type="submit"
             style={{
-                padding: '10px 20px',
-                backgroundColor: '#28a745',
+                width: '100%',
+                padding: '16px',
+                backgroundColor: '#ff4d4d',
                 color: 'white',
                 border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer'
+                borderRadius: '50px',
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                transition: 'background 0.3s ease'
             }}
             >
-            Analyze
+            ANALYZE TEXT
             </button>
         </form>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default TextFallback;
